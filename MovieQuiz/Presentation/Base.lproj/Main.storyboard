@@ -45,17 +45,10 @@
                                             <constraint firstAttribute="width" secondItem="Kwy-yl-Fz7" secondAttribute="height" multiplier="2:3" id="zV0-XQ-G8I"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-jp-Y87" userLabel="Question Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг этого фильма меньше чем 5?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-jp-Y87" userLabel="Question Label">
                                         <rect key="frame" x="0.0" y="624.5" width="374" height="17.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Рейтинг этого фильма меньше чем 5?">
-                                                <attributes>
-                                                    <color key="NSColor" name="YP White"/>
-                                                    <font key="NSFont" size="23" name="YSDisplay-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                        <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="23"/>
+                                        <color key="textColor" name="YP White"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jgd-9M-SuI">
@@ -88,22 +81,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="noButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3t-kl-dqM"/>
+                                                    <action selector="noButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QCe-N0-gi3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxz-hB-T5q" userLabel="Yes button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nxz-hB-T5q" userLabel="Yes button">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="60"/>
                                                 <color key="backgroundColor" name="YP White"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="E2d-5V-Z7O"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
                                                 <color key="tintColor" name="YP Black"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Да">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Да">
                                                             <attributes>
+                                                                <color key="NSColor" name="YP Black"/>
                                                                 <font key="NSFont" size="20" name="YSDisplay-Medium"/>
                                                             </attributes>
                                                         </fragment>
@@ -115,7 +108,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydp-lL-v0v"/>
+                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pWF-ck-hPe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -144,7 +137,10 @@
                         <outlet property="activityIndicator" destination="hIK-tv-dZd" id="yLW-zk-fKQ"/>
                         <outlet property="counterLabel" destination="MMT-Wi-nan" id="UUj-Ua-Y9C"/>
                         <outlet property="imageView" destination="Kwy-yl-Fz7" id="l5c-jH-LaX"/>
+                        <outlet property="noButton" destination="nQl-5F-oPK" id="RHX-fg-JJI"/>
+                        <outlet property="questionTitleLabel" destination="n0w-Ig-BON" id="bJH-y1-oOx"/>
                         <outlet property="textLabel" destination="MfB-jp-Y87" id="Hwo-wU-thH"/>
+                        <outlet property="yesButton" destination="Nxz-hB-T5q" id="OKm-WC-kb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
