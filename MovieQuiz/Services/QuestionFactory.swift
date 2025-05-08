@@ -31,7 +31,6 @@ class QuestionFactory: QuestionFactoryProtocol {
             let index = (0..<self.movies.count).randomElement() ?? 0
             
             guard let movie = self.movies[safe: index] else { return }
-            
             var imageData = Data()
             
             do {
@@ -39,7 +38,7 @@ class QuestionFactory: QuestionFactoryProtocol {
             } catch {
                 print("Failed to load image")
             }
-            let rating = Float(movie.rating) ?? 0
+            let rating = Float(movie.rating ?? "") ?? 0
             
             let text = "Рейтинг этого фильма больше чем 7?"
             let correctAnswer = rating > 7
