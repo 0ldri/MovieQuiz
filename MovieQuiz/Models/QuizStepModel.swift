@@ -5,11 +5,11 @@ struct QuizStepModel {
     let question: String
     let questionNumber: String
     
-    static func convert(model: QuizQuestion, currentQuestionIndex: Int, questions: [QuizQuestion]) -> QuizStepModel {
+    static func convert(model: QuizQuestion, currentQuestionIndex: Int, totalQuestion: Int) -> QuizStepModel {
       return QuizStepModel(
             image: UIImage(named: model.image) ?? UIImage(),
             question: model.text,
-            questionNumber: "\(currentQuestionIndex + 1)/\(questions.count)"
+            questionNumber: "\(currentQuestionIndex + 1)/\(totalQuestion)"
         )
     }
 }
