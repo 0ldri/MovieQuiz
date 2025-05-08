@@ -6,8 +6,8 @@ struct QuizStepModel {
     let questionNumber: String
     
     static func convert(model: QuizQuestion, currentQuestionIndex: Int, totalQuestion: Int) -> QuizStepModel {
-      return QuizStepModel(
-            image: UIImage(named: model.image) ?? UIImage(),
+        QuizStepModel(
+            image: UIImage(data: model.image) ?? UIImage(),
             question: model.text,
             questionNumber: "\(currentQuestionIndex + 1)/\(totalQuestion)"
         )

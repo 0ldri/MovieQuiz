@@ -1,11 +1,11 @@
 import Foundation
 
-struct GameResult {
+struct QuizResult {
     let correct: Int
     let total: Int
     let date: Date
     
-    func isBetterThan(_ another: GameResult) -> Bool {
+    func isBetterThan(_ another: QuizResult) -> Bool {
         correct > another.correct
     }
 }
