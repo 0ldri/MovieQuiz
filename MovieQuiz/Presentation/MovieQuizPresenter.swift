@@ -49,7 +49,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
     }
     // MARK: - Private Methods
     private func proceedWithAnswer(isYes: Bool) {
-        guard let currentQuestion = currentQuestion else { return }
+        guard let currentQuestion else { return }
         let isCorrect = currentQuestion.correctAnswer == isYes
         if isCorrect {
             correctAnswers += 1
@@ -90,7 +90,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
     }
     
     func convert(model: QuizQuestion, currentQuestionIndex: Int, totalQuestion: Int) -> QuizStepModel {
-        return QuizStepModel(
+         QuizStepModel(
             image: UIImage(data: model.image) ?? UIImage(),
             question: model.text,
             questionNumber: "\(currentQuestionIndex + 1)/\(totalQuestion)"
